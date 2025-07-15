@@ -1,0 +1,3 @@
+peertube._domainkey.vietube.dtvi.id.vn.	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
+	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxw0TU9WHjYC3cM6wU5BEZJaE2fhfe8ILqIQl1lNXr2QsPiC8dnVIgjsOVXrGOlnJZraD6zXHQF9qoc5XEmxDFuNLMb8S6E4hgXcooI395MU8rLfqBcBAtTppLjuWJ7lKlMEU2iyOW3SG1c5DW+iyJf9QRJH/ZDLnXqUisi8bwCzT/81Mzyt8ZYM+lhm6I4Zj+cfKocZ4xtdsIj"
+	  "3ymtVljr/cXWFvUxWT80Jvs0MKBab62r66iAmKP0vt+DtNi4DmOYh8M7A12OqlqHs6tYp4sEBYrGy06bjQklU5bkujFQCb4G9Oh7UZaTDphHWIwN0zFEz6OlzTZ9AEPeirAjMSawIDAQAB" )  ; ----- DKIM key peertube for vietube.dtvi.id.vn
