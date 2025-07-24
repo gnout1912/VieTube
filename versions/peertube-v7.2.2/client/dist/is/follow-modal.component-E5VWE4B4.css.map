@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/+admin/follows/following-list/follow-modal.component.scss"],
+  "sourcesContent": ["textarea {\n  height: 200px;\n}\n"],
+  "mappings": "AAAA,SACE,OAAA",
+  "names": []
+}

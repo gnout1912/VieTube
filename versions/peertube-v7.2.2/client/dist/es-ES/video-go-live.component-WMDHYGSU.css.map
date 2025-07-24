@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/+videos-publish-manage/+video-publish/live/video-go-live.component.scss"],
+  "sourcesContent": [".live-type {\n  margin-top: 15px;\n}\n\n"],
+  "mappings": "AAAA,CAAA,UACE,WAAA",
+  "names": []
+}

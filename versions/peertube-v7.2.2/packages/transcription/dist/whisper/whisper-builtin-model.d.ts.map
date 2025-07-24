@@ -1,0 +1,1 @@
+{"version":3,"file":"whisper-builtin-model.d.ts","sourceRoot":"","sources":["../../src/whisper/whisper-builtin-model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAA;AAE9D,MAAM,MAAM,uBAAuB,GAAG,MAAM,GAAG,MAAM,GAAG,OAAO,GAAG,QAAQ,GAAG,OAAO,GAAG,UAAU,GAAG,UAAU,CAAA;AAE9G,qBAAa,mBAAoB,SAAQ,kBAAkB;gBAG5C,IAAI,EAAE,uBAAuB;CAG3C"}

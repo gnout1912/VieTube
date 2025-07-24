@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/form-validators/shared/validator-utils.ts"],
+  "sourcesContent": ["import { AbstractControl, ValidatorFn } from '@angular/forms'\nimport { splitAndGetNotEmpty } from '@root-helpers/string'\n\nexport const unique: ValidatorFn = (control: AbstractControl) => {\n  if (!control.value) return null\n\n  const hosts = splitAndGetNotEmpty(control.value)\n\n  if (hosts.every((host: string) => hosts.indexOf(host) === hosts.lastIndexOf(host))) {\n    return null\n  }\n\n  return {\n    unique: {\n      reason: 'invalid'\n    }\n  }\n}\n"],
+  "mappings": "yCAGO,IAAMA,EAAuBC,GAA4B,CAC9D,GAAI,CAACA,EAAQC,MAAO,OAAO,KAE3B,IAAMC,EAAQC,EAAoBH,EAAQC,KAAK,EAE/C,OAAIC,EAAME,MAAOC,GAAiBH,EAAMI,QAAQD,CAAI,IAAMH,EAAMK,YAAYF,CAAI,CAAC,EACxE,KAGF,CACLN,OAAQ,CACNS,OAAQ,WAGd",
+  "names": ["unique", "control", "value", "hosts", "splitAndGetNotEmpty", "every", "host", "indexOf", "lastIndexOf", "reason"]
+}

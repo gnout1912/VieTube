@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-moderation/bulk.service.ts"],
+  "sourcesContent": ["import { catchError } from 'rxjs/operators'\nimport { HttpClient } from '@angular/common/http'\nimport { Injectable, inject } from '@angular/core'\nimport { RestExtractor } from '@app/core'\nimport { BulkRemoveCommentsOfBody } from '@peertube/peertube-models'\nimport { environment } from '../../../environments/environment'\n\n@Injectable()\nexport class BulkService {\n  private authHttp = inject(HttpClient)\n  private restExtractor = inject(RestExtractor)\n\n  static BASE_BULK_URL = environment.apiUrl + '/api/v1/bulk'\n\n  removeCommentsOf (body: BulkRemoveCommentsOfBody) {\n    const url = BulkService.BASE_BULK_URL + '/remove-comments-of'\n\n    return this.authHttp.post(url, body)\n      .pipe(catchError(err => this.restExtractor.handleError(err)))\n  }\n}\n"],
+  "mappings": "uHAQM,IAAOA,EAAP,MAAOA,CAAW,CACdC,SAAWC,EAAOC,CAAU,EAC5BC,cAAgBF,EAAOG,CAAa,EAI5CC,iBAAkBC,EAA8B,CAC9C,IAAMC,EAAMR,EAAYS,cAAgB,sBAExC,OAAO,KAAKR,SAASS,KAAKF,EAAKD,CAAI,EAChCI,KAAKC,EAAWC,GAAO,KAAKT,cAAcU,YAAYD,CAAG,CAAC,CAAC,CAChE,GAPAE,EAJWf,EAIJS,gBAAgBO,EAAYC,OAAS,kBAJjCjB,wCAAAA,EAAW,KAAXA,wBAAAA,EAAWkB,QAAXlB,EAAWmB,SAAA,CAAA,GAAlB,IAAOnB,EAAPoB",
+  "names": ["BulkService", "authHttp", "inject", "HttpClient", "restExtractor", "RestExtractor", "removeCommentsOf", "body", "url", "BASE_BULK_URL", "post", "pipe", "catchError", "err", "handleError", "__publicField", "environment", "apiUrl", "factory", "\u0275fac", "_BulkService"]
+}

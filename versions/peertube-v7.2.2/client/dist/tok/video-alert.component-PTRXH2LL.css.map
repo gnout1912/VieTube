@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;eebd3e1a6726c361537ad3199f0176cc07b38187954525dedf8073834482e4a7;/home/florian/Coding/NodeJS/PeerTube-release/client/src/app/+video-watch/shared/information/video-alert.component.ts"],
+  "sourcesContent": ["my-alert { text-align: center }"],
+  "mappings": "AAAA,SAAW,WAAY,MAAO",
+  "names": []
+}

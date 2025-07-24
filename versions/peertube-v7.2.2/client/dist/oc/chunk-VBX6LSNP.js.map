@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-plugin-pages/routes.ts"],
+  "sourcesContent": ["import { Routes } from '@angular/router'\nimport { PluginPagesComponent } from './plugin-pages.component'\n\nexport default [\n  {\n    path: '**',\n    component: PluginPagesComponent,\n    data: {\n      reloadOnSameNavigation: true\n    }\n  }\n] satisfies Routes\n"],
+  "mappings": "2FAGA,IAAAA,EAAe,CACb,CACEC,KAAM,KACNC,UAAWC,EACXC,KAAM,CACJC,uBAAwB,IAE3B",
+  "names": ["routes_default", "path", "component", "PluginPagesComponent", "data", "reloadOnSameNavigation"]
+}

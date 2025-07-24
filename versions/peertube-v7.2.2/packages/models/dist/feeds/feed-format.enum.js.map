@@ -1,0 +1,1 @@
+{"version":3,"file":"feed-format.enum.js","sourceRoot":"","sources":["../../src/feeds/feed-format.enum.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,UAAU,GAAG;IACxB,OAAO,EAAE,KAAK;IACd,GAAG,EAAE,KAAK;IACV,IAAI,EAAE,MAAM;IACZ,IAAI,EAAE,MAAM;CACJ,CAAA;AAIV,MAAM,CAAC,MAAM,QAAQ,GAAG;IACtB,MAAM,EAAE,QAAQ;IAChB,OAAO,EAAE,SAAS;CACV,CAAA"}

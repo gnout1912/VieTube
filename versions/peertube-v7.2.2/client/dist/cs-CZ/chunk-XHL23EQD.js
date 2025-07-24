@@ -1,0 +1,1 @@
+import{d as r}from"./chunk-WO4VNXA3.js";var i={VALIDATORS:[r.required],MESSAGES:{required:"U\u017Eivatelsk\xE9 jm\xE9no je vy\u017Eadov\xE1no."}},A={VALIDATORS:[r.required],MESSAGES:{required:"Heslo je vy\u017Eadov\xE1no."}};export{i as a,A as b};/**i18n:1cf7c077143c4c267fdafbe5508f191afcef21bad6aba22a3a8dc180e1003753*///# sourceMappingURL=chunk-XHL23EQD.js.map

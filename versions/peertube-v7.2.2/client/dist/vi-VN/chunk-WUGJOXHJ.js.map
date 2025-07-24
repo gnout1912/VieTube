@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-main/peertube-modal/peertube-modal.service.ts"],
+  "sourcesContent": ["import { Injectable } from '@angular/core'\nimport { Subject } from 'rxjs'\n\n@Injectable({ providedIn: 'root' })\nexport class PeertubeModalService {\n  openQuickSettingsSubject = new Subject<void>()\n}\n"],
+  "mappings": "uFAIA,IAAaA,GAAoB,IAAA,CAA3B,IAAOA,EAAP,MAAOA,CAAoB,CAC/BC,yBAA2B,IAAIC,KADpBF,wCAAAA,EAAoB,KAApBA,wBAAAA,EAAoBG,QAApBH,EAAoBI,UAAAC,WADP,MAAM,CAAA,GAC1B,IAAOL,EAAPM,SAAON,CAAoB,GAAA",
+  "names": ["PeertubeModalService", "openQuickSettingsSubject", "Subject", "factory", "\u0275fac", "providedIn", "_PeertubeModalService"]
+}

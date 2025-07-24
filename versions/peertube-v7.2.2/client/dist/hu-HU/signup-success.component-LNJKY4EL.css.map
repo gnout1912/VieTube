@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/+signup/shared/signup-success.component.scss"],
+  "sourcesContent": ["my-alert {\n  display: block;\n  font-size: 18px;\n  max-width: 900px;\n  text-align: center;\n  margin: auto;\n}\n"],
+  "mappings": "AAAA,SACE,QAAA,MACA,UAAA,KACA,UAAA,MACA,WAAA,OAJF,OAKE",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-video-miniature/video-actions-dropdown.component.scss"],
+  "sourcesContent": [":host {\n  position: relative;\n}\n\n.playlist-dropdown {\n  position: absolute;\n\n  .anchor {\n    display: block;\n    opacity: 0;\n  }\n}\n\n:host ::ng-deep .icon-playlist-add {\n  left: 2px;\n}\n"],
+  "mappings": "AAAA,MACE,SAAA,SAGF,CAAA,kBACE,SAAA,SAEA,CAHF,kBAGE,CAAA,OACE,QAAA,MACA,QAAA,EAIJ,MAAA,UAAA,CAAA,kBACE,KAAA",
+  "names": []
+}

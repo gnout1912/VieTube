@@ -1,0 +1,1 @@
+{"version":3,"file":"context.js","sourceRoot":"","sources":["../../../../server/core/lib/activitypub/context.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAE,MAAM,qBAAqB,CAAA;AAE3C,MAAM,UAAU,gBAAgB;IAC9B,OAAO,CAAC,WAAc,EAAE,EAAE;QACxB,OAAO,KAAK,CAAC,UAAU,CACrB,WAAW,EACX,mDAAmD,CACpD,CAAA;IACH,CAAC,CAAA;AACH,CAAC"}

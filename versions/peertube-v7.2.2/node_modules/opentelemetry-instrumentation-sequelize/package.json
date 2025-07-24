@@ -1,0 +1,75 @@
+{
+    "name": "opentelemetry-instrumentation-sequelize",
+    "version": "0.41.0",
+    "description": "open telemetry instrumentation for the `sequelize` module",
+    "keywords": [
+        "sequelize",
+        "opentelemetry"
+    ],
+    "author": {
+        "name": "Aspecto",
+        "email": "support@aspecto.io",
+        "url": "https://aspecto.io"
+    },
+    "homepage": "https://github.com/aspecto-io/opentelemetry-ext-js",
+    "license": "Apache-2.0",
+    "main": "dist/src/index.js",
+    "files": [
+        "dist/**/*.js",
+        "dist/**/*.js.map",
+        "dist/**/*.d.ts",
+        "LICENSE",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aspecto-io/opentelemetry-ext-js.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "prepare": "yarn build",
+        "test": "mocha --require @opentelemetry/contrib-test-utils",
+        "test:jaeger": "OTEL_EXPORTER_JAEGER_AGENT_HOST=localhost mocha --require @opentelemetry/contrib-test-utils",
+        "test:ci": "yarn test",
+        "watch": "tsc -w",
+        "version:update": "node ../../scripts/version-update.js",
+        "version": "yarn run version:update"
+    },
+    "bugs": {
+        "url": "https://github.com/aspecto-io/opentelemetry-ext-js/issues"
+    },
+    "peerDependencies": {
+        "@opentelemetry/api": "^1.8.0"
+    },
+    "dependencies": {
+        "@opentelemetry/core": "^1.24.1",
+        "@opentelemetry/instrumentation": "^0.51.1",
+        "@opentelemetry/semantic-conventions": "^1.24.1"
+    },
+    "devDependencies": {
+        "@opentelemetry/api": "^1.8.0",
+        "@opentelemetry/contrib-test-utils": "^0.39.0",
+        "@opentelemetry/sdk-trace-base": "^1.24.1",
+        "@types/mocha": "^8.2.2",
+        "aspecto-opentelemetry-instrumentation-mocha": "0.0.9-alpha.0",
+        "expect": "^26.6.2",
+        "mocha": "^8.4.0",
+        "mysql2": "^2.2.5",
+        "pg": "^8.4.2",
+        "sequelize": "^5.22.0",
+        "sqlite3": "^5.0.2",
+        "ts-node": "^10.9.2",
+        "typescript": "5.4.5"
+    },
+    "mocha": {
+        "extension": [
+            "ts"
+        ],
+        "spec": "test/**/*.spec.ts",
+        "require": [
+            "ts-node/register",
+            "aspecto-opentelemetry-instrumentation-mocha"
+        ]
+    },
+    "gitHead": "6fd75bf4b1355485542c31e4f9322d70af8fe27d"
+}

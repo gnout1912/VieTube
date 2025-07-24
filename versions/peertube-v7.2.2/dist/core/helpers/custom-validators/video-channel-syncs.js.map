@@ -1,0 +1,1 @@
+{"version":3,"file":"video-channel-syncs.js","sourceRoot":"","sources":["../../../../server/core/helpers/custom-validators/video-channel-syncs.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,wBAAwB,EAAE,MAAM,mCAAmC,CAAA;AAC5E,OAAO,EAAE,MAAM,EAAE,MAAM,WAAW,CAAA;AAElC,MAAM,UAAU,4BAA4B,CAAE,KAAU;IACtD,OAAO,MAAM,CAAC,KAAK,CAAC,IAAI,wBAAwB,CAAC,KAAK,CAAC,KAAK,SAAS,CAAA;AACvE,CAAC"}

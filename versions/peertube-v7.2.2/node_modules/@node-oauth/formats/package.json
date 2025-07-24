@@ -1,0 +1,59 @@
+{
+  "name": "@node-oauth/formats",
+  "version": "1.0.0",
+  "description": "Validate ascii and unicode values.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "./node_modules/.bin/eslint index.js test",
+    "test": "mocha test",
+    "test:coverage": "NODE_ENV=test nyc --reporter=html --reporter=text ./node_modules/.bin/mocha 'test/*'",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "docs": "jsdoc2md index.js > API.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-oauth/formats.git"
+  },
+  "keywords": [
+    "unicode",
+    "validate",
+    "utf-8",
+    "ascii",
+    "vschar",
+    "uri",
+    "uchar",
+    "nqschar",
+    "nqchar",
+    "nchar"
+  ],
+  "contributors": [
+    "Jan Küster <info@jankuester.com>",
+    "Jonah Werre <jonahwerre@gmail.com>",
+    "Michael Salinger <mjsalinger@gmail.com>",
+    "Nuno Sousa"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-oauth/formats/issues"
+  },
+  "homepage": "https://github.com/node-oauth/formats#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^8.3.0",
+    "jsdoc-to-markdown": "^7.1.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
+  },
+  "files": [
+    "index.js",
+    "API.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

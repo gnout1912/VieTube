@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:platform" content="PeerTube" />
+
+    <!-- /!\ The following comment is used by the server to prerender some tags /!\ -->
+
+    <!-- title tag -->
+    <!-- description tag -->
+    <!-- custom css tag -->
+    <!-- meta tags -->
+    <!-- server config -->
+
+    <!-- /!\ Do not remove it /!\ -->
+
+    <link rel="icon" type="image/png" href="/client/assets/images/favicon.png" />
+    <script type="module" crossorigin src="/client/standalone/videos/assets/embed-C4piUvKA.js"></script>
+    <link rel="modulepreload" crossorigin href="/client/standalone/videos/assets/jschannel-DkCUG_QY.js">
+    <link rel="stylesheet" crossorigin href="/client/standalone/videos/assets/embed-B6DOGqvw.css">
+  </head>
+
+  <body id="custom-css" class="standalone-video-embed">
+
+    <div id="error-block">
+      <!-- eslint-disable-next-line @angular-eslint/template/elements-content -->
+      <h1 id="error-title"></h1>
+
+      <div id="error-content"></div>
+
+      <details id="error-details">
+        <summary>Error details</summary>
+
+        <div id="error-details-content"></div>
+      </details>
+    </div>
+
+    <div id="video-password-block">
+      <!-- eslint-disable-next-line @angular-eslint/template/elements-content -->
+      <h1 id="video-password-title"></h1>
+
+      <div id="video-password-content"></div>
+
+      <form id="video-password-form">
+        <input type="password" id="video-password-input" name="video-password" required>
+        <button type="submit" id="video-password-submit"> </button>
+      </form>
+
+      <div id="video-password-error"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+        <g fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+      </svg>
+    </div>
+
+    <div id="video-wrapper"></div>
+
+    <script type="text/javascript">
+      // Can be called in embed.ts
+      window.displayIncompatibleBrowser = function (err) {
+        const text = 'The player is not compatible with your web browser. Please try latest Firefox version.'
+
+        document.title = 'Sorry' + ' - ' + text
+
+        const errorBlock = document.getElementById('error-block')
+        errorBlock.style.display = 'flex'
+
+        const errorTitle = document.getElementById('error-title')
+        errorTitle.innerHTML = 'Sorry'
+
+        const errorText = document.getElementById('error-content')
+        errorText.innerHTML = text
+
+        const errorDetails = document.getElementById('error-details')
+        let msg = ''
+
+        if (typeof err === 'string') msg = err
+        else if (err instanceof Error) msg = err.name + ' ' + err.message + ' at:\n' + err.stack
+
+        if (msg) {
+          const errorDetailsContent = document.getElementById('error-details-content')
+          errorDetailsContent.innerText = msg
+        } else {
+          errorDetails.style.display = 'none'
+        }
+
+        const videoWrapper = document.getElementById('video-wrapper')
+        if (videoWrapper) videoWrapper.style.display = 'none'
+
+        const placeholderPreview = document.getElementById('placeholder-preview')
+        if (placeholderPreview) placeholderPreview.style.display = 'none'
+      }
+
+      window.onerror = function (msg, source, lineNumber, columnNumber, err) {
+        if (typeof msg === 'string' && msg.toLowerCase().includes(' ice ')) {
+          console.warn(msg)
+          return
+        }
+
+        // Google Bot doesn't support our codecs, but it should not prevent indexing
+        if (/googlebot/i.test(navigator.userAgent)) {
+          console.error(err)
+          return
+        }
+
+        // Video element is already created -> don't crash the player
+        // We also handle the case where a bugged extension throws an error (maybeUnrelatedError)
+        const maybeUnrelatedError = lineNumber === 0 && columnNumber === 0 && !source
+
+        if (document.querySelector('.vjs-can-play') || maybeUnrelatedError) {
+          if (window.logger && typeof window.logger.error === 'function') {
+            window.logger.error('Uncaught error in embed player ', err)
+          }
+
+          return
+        }
+
+        window.displayIncompatibleBrowser(err)
+
+        if (window.logger && typeof window.logger.error === 'function') {
+          window.logger.error('Embed player crashed', err)
+        }
+      }
+
+      if (/MSIE|Trident/.test(window.navigator.userAgent) ) {
+        window.displayIncompatibleBrowser()
+      }
+
+      // BigInt must be supported (for the player to work)
+      try {
+        BigInt(9007199254740991)
+      } catch (err) {
+        console.error('BigInt is not supported on this web browser')
+
+        window.displayIncompatibleBrowser()
+      }
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"file":"check-actor.js","sourceRoot":"","sources":["../../../../../server/core/lib/activitypub/actors/check-actor.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,wBAAwB,CAAE,IAAoB,EAAE,KAAqB;IACnF,IAAI,CAAC,IAAI,CAAC,QAAQ,IAAI,CAAC,KAAK,CAAC,QAAQ;QAAE,OAAO,KAAK,CAAA;IACnD,IAAI,IAAI,CAAC,QAAQ,KAAK,KAAK,CAAC,QAAQ;QAAE,OAAO,KAAK,CAAA;IAElD,OAAO,IAAI,CAAA;AACb,CAAC"}

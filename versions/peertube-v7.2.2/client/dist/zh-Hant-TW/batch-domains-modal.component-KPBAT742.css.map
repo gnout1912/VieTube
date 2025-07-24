@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-moderation/batch-domains-modal.component.scss"],
+  "sourcesContent": ["textarea {\n  height: 200px;\n}\n"],
+  "mappings": "AAAA,SACE,OAAA",
+  "names": []
+}

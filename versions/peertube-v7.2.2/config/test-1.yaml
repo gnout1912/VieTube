@@ -1,0 +1,48 @@
+listen:
+  port: 9001
+
+webserver:
+  port: 9001
+
+database:
+  suffix: '_test1'
+
+# From the project root directory
+storage:
+  tmp: 'test1/tmp/'
+  tmp_persistent: 'test1/tmp-persistent/'
+  bin: 'test1/bin/'
+  avatars: 'test1/avatars/'
+  web_videos: 'test1/web-videos/'
+  streaming_playlists: 'test1/streaming-playlists/'
+  original_video_files: 'test1/original-video-files/'
+  redundancy: 'test1/redundancy/'
+  logs: 'test1/logs/'
+  previews: 'test1/previews/'
+  thumbnails: 'test1/thumbnails/'
+  storyboards: 'test1/storyboards/'
+  torrents: 'test1/torrents/'
+  captions: 'test1/captions/'
+  cache: 'test1/cache/'
+  plugins: 'test1/plugins/'
+  well_known: 'test1/well-known/'
+  client_overrides: 'test1/client-overrides/'
+
+admin:
+  email: 'admin1@example.com'
+
+user:
+  video_quota: 5242880 # 5MB
+
+signup:
+  limit: 4
+
+transcoding:
+  enabled: false
+
+video_studio:
+  enabled: false
+
+live:
+  rtmp:
+    port: 1936

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-main/common/autofocus.directive.ts"],
+  "sourcesContent": ["import { AfterViewInit, Directive, ElementRef, inject } from '@angular/core'\n\n@Directive({\n  selector: '[myAutofocus]',\n  standalone: true\n})\nexport class AutofocusDirective implements AfterViewInit {\n  private host = inject(ElementRef)\n\n  ngAfterViewInit () {\n    const el = this.host.nativeElement as HTMLElement\n\n    el.focus({ preventScroll: true })\n  }\n}\n"],
+  "mappings": "iGAMA,IAAaA,GAAkB,IAAA,CAAzB,IAAOA,EAAP,MAAOA,CAAkB,CACrBC,KAAOC,EAAOC,CAAU,EAEhCC,iBAAe,CACF,KAAKH,KAAKI,cAElBC,MAAM,CAAEC,cAAe,EAAI,CAAE,CAClC,KAPWP,wCAAAA,EAAkB,KAAlBA,sBAAAA,EAAkBQ,UAAA,CAAA,CAAA,GAAA,cAAA,EAAA,CAAA,CAAA,CAAA,GAAzB,IAAOR,EAAPS,SAAOT,CAAkB,GAAA",
+  "names": ["AutofocusDirective", "host", "inject", "ElementRef", "ngAfterViewInit", "nativeElement", "focus", "preventScroll", "selectors", "_AutofocusDirective"]
+}

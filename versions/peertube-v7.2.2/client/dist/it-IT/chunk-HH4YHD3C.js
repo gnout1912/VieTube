@@ -1,0 +1,3 @@
+import{Ka as d,Ua as c,aa as r,ta as o,ua as s}from"./chunk-F7FAPFPY.js";import{i}from"./chunk-AI7IVZV2.js";var p=(()=>{let e=class e{renderer=r(d);hostElement=r(s);pluginSelectorId=o(void 0);ngOnInit(){let n=this.pluginSelectorId();if(!n)return;if(this.hostElement.nativeElement.getAttribute("id"))throw new Error("Cannot set id on element that already has an id");this.renderer.setAttribute(this.hostElement.nativeElement,"id",`plugin-selector-${n}`)}};i(e,"\u0275fac",function(l){return new(l||e)}),i(e,"\u0275dir",c({type:e,selectors:[["","myPluginSelector",""]],inputs:{pluginSelectorId:[1,"pluginSelectorId"]}}));let t=e;return t})();export{p as a};
+/**i18n:1cf7c077143c4c267fdafbe5508f191afcef21bad6aba22a3a8dc180e1003753*/
+//# sourceMappingURL=chunk-HH4YHD3C.js.map

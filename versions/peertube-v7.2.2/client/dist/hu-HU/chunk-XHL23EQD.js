@@ -1,0 +1,1 @@
+import{d as r}from"./chunk-WO4VNXA3.js";var i={VALIDATORS:[r.required],MESSAGES:{required:"A felhaszn\xE1l\xF3n\xE9v megad\xE1sa k\xF6telez\u0151."}},A={VALIDATORS:[r.required],MESSAGES:{required:"A jelsz\xF3 megad\xE1sa k\xF6telez\u0151."}};export{i as a,A as b};/**i18n:1cf7c077143c4c267fdafbe5508f191afcef21bad6aba22a3a8dc180e1003753*///# sourceMappingURL=chunk-XHL23EQD.js.map

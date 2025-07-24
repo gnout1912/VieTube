@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/core/routing/user.resolver.ts"],
+  "sourcesContent": ["import { inject } from '@angular/core'\nimport { ResolveFn } from '@angular/router'\nimport { first, map } from 'rxjs'\nimport { AuthService, AuthUser } from '../auth'\n\nexport const userResolver: ResolveFn<AuthUser> = () => {\n  const auth = inject(AuthService)\n\n  return auth.userInformationLoaded\n    .pipe(first(), map(() => auth.getUser()))\n}\n"],
+  "mappings": "+DAKO,IAAMA,EAAoCA,IAAK,CACpD,IAAMC,EAAOC,EAAOC,CAAW,EAE/B,OAAOF,EAAKG,sBACTC,KAAKC,EAAK,EAAIC,EAAI,IAAMN,EAAKO,QAAO,CAAE,CAAC,CAC5C",
+  "names": ["userResolver", "auth", "inject", "AuthService", "userInformationLoaded", "pipe", "first", "map", "getUser"]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"abuse-reason.model.js","sourceRoot":"","sources":["../../../src/moderation/abuse/abuse-reason.model.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,sBAAsB,GAAG;IACpC,oBAAoB,EAAE,CAAC;IACvB,kBAAkB,EAAE,CAAC;IACrB,kBAAkB,EAAE,CAAC;IACrB,OAAO,EAAE,CAAC;IACV,MAAM,EAAE,CAAC;IACT,YAAY,EAAE,CAAC;IACf,UAAU,EAAE,CAAC;IACb,QAAQ,EAAE,CAAC;CACH,CAAA"}

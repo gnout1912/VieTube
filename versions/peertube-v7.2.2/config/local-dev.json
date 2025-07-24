@@ -1,0 +1,261 @@
+{
+  "instance": {
+    "name": "PeerTube",
+    "short_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser.",
+    "description": "Welcome to this PeerTube instance!",
+    "terms": "No terms for now.",
+    "code_of_conduct": "",
+    "creation_reason": "",
+    "moderation_information": "",
+    "administrator": "",
+    "maintenance_lifetime": "",
+    "business_model": "",
+    "hardware_information": "",
+    "languages": [],
+    "categories": [],
+    "is_nsfw": false,
+    "default_nsfw_policy": "display",
+    "server_country": "",
+    "support": {
+      "text": ""
+    },
+    "social": {
+      "bluesky_link": "",
+      "mastodon_link": "",
+      "external_link": ""
+    },
+    "default_client_route": "/videos/trending",
+    "customizations": {
+      "css": "",
+      "javascript": ""
+    }
+  },
+  "theme": {
+    "default": "default"
+  },
+  "services": {
+    "twitter": {
+      "username": "@Chocobozzz"
+    }
+  },
+  "client": {
+    "videos": {
+      "miniature": {
+        "prefer_author_display_name": false
+      }
+    },
+    "menu": {
+      "login": {
+        "redirect_on_single_external_auth": false
+      }
+    }
+  },
+  "cache": {
+    "previews": {
+      "size": 10
+    },
+    "captions": {
+      "size": 10
+    },
+    "torrents": {
+      "size": 10
+    },
+    "storyboards": {
+      "size": 500
+    }
+  },
+  "signup": {
+    "enabled": true,
+    "limit": 1000,
+    "requires_approval": true,
+    "requires_email_verification": false,
+    "minimum_age": 16
+  },
+  "admin": {
+    "email": "admin@example.com"
+  },
+  "contact_form": {
+    "enabled": true
+  },
+  "user": {
+    "history": {
+      "videos": {
+        "enabled": true
+      }
+    },
+    "video_quota": -1,
+    "video_quota_daily": -1,
+    "default_channel_name": "Main $1 channel"
+  },
+  "video_channels": {
+    "max_per_user": 1
+  },
+  "transcoding": {
+    "enabled": true,
+    "original_file": {
+      "keep": false
+    },
+    "remote_runners": {
+      "enabled": true
+    },
+    "allow_additional_extensions": true,
+    "allow_audio_files": true,
+    "threads": 0,
+    "concurrency": 4,
+    "profile": "default",
+    "resolutions": {
+      "0p": false,
+      "144p": false,
+      "240p": true,
+      "360p": false,
+      "480p": true,
+      "720p": true,
+      "1080p": true,
+      "1440p": false,
+      "2160p": false
+    },
+    "always_transcode_original_resolution": true,
+    "fps": {
+      "max": 60
+    },
+    "web_videos": {
+      "enabled": false
+    },
+    "hls": {
+      "enabled": true,
+      "split_audio_and_video": false
+    }
+  },
+  "live": {
+    "enabled": true,
+    "allow_replay": true,
+    "latency_setting": {
+      "enabled": true
+    },
+    "max_duration": -1,
+    "max_instance_lives": 20,
+    "max_user_lives": 3,
+    "transcoding": {
+      "enabled": true,
+      "remote_runners": {
+        "enabled": false
+      },
+      "threads": 0,
+      "profile": "default",
+      "resolutions": {
+        "0p": false,
+        "144p": false,
+        "240p": true,
+        "360p": true,
+        "480p": true,
+        "720p": true,
+        "1080p": true,
+        "1440p": true,
+        "2160p": true
+      },
+      "always_transcode_original_resolution": false,
+      "fps": {
+        "max": 60
+      }
+    }
+  },
+  "video_studio": {
+    "enabled": true,
+    "remote_runners": {
+      "enabled": false
+    }
+  },
+  "video_transcription": {
+    "enabled": false,
+    "remote_runners": {
+      "enabled": false
+    }
+  },
+  "video_file": {
+    "update": {
+      "enabled": false
+    }
+  },
+  "import": {
+    "videos": {
+      "concurrency": 2,
+      "http": {
+        "enabled": true
+      },
+      "torrent": {
+        "enabled": true
+      }
+    },
+    "video_channel_synchronization": {
+      "enabled": true,
+      "max_per_user": 10
+    },
+    "users": {
+      "enabled": true
+    }
+  },
+  "export": {
+    "users": {
+      "enabled": true,
+      "export_expiration": 172800000,
+      "max_user_video_quota": 10737418240
+    }
+  },
+  "trending": {
+    "videos": {
+      "algorithms": {
+        "enabled": [
+          "hot",
+          "most-viewed",
+          "most-liked"
+        ],
+        "default": "most-viewed"
+      }
+    }
+  },
+  "auto_blacklist": {
+    "videos": {
+      "of_users": {
+        "enabled": false
+      }
+    }
+  },
+  "followers": {
+    "instance": {
+      "enabled": true,
+      "manual_approval": false
+    }
+  },
+  "followings": {
+    "instance": {
+      "auto_follow_back": {
+        "enabled": false
+      },
+      "auto_follow_index": {
+        "enabled": false,
+        "index_url": ""
+      }
+    }
+  },
+  "broadcast_message": {
+    "enabled": false,
+    "message": "",
+    "level": "info",
+    "dismissable": false
+  },
+  "search": {
+    "remote_uri": {
+      "users": true,
+      "anonymous": false
+    },
+    "search_index": {
+      "enabled": true,
+      "url": "https://sepiasearch.org",
+      "disable_local_search": false,
+      "is_default_search": false
+    }
+  },
+  "storyboards": {
+    "enabled": true
+  }
+}

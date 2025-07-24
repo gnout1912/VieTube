@@ -1,0 +1,81 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script type="module" crossorigin src="/client/standalone/videos/assets/test-embed-wmh6s2Lc.js"></script>
+  <link rel="modulepreload" crossorigin href="/client/standalone/videos/assets/jschannel-DkCUG_QY.js">
+  <link rel="stylesheet" crossorigin href="/client/standalone/videos/assets/test-embed-CF0c6QJY.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="icon">
+        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='34'%20height='34'%20rx='12'%20fill='%23E9DFDF'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11%2016.3306V7L18%2011.6653L11%2016.3306Z'%20fill='black'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11%2025.6613V16.3307L18%2020.996L11%2025.6613Z'%20fill='%23737373'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M18%2020.996V11.6653L25%2016.3306L18%2020.996Z'%20fill='%23F1680D'/%3e%3c/svg%3e" alt="">
+      </div>
+      <div>
+        PeerTube
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <h1>Embed Playground</h1>
+  </header>
+  <main>
+    <aside>
+      <div id="host"></div>
+    </aside>
+    <div id="controls">
+      <div>
+        <button onclick="player.play()">Play</button>
+        <button onclick="player.pause()">Pause</button>
+        <button onclick="player.seek(parseInt(prompt('Enter position to seek to (in seconds)')))">Seek</button>
+        <button onclick="player.setVolume(0)">Mute</button>
+        <button onclick="player.setVolume(1)">Unmute</button>
+        <button onclick="player.playNextVideo()">Next video</button>
+        <button onclick="player.playPreviousVideo()">Previous video</button>
+        <button onclick="getPlayerStatus()">Get status</button>
+      </div>
+      <br/>
+
+      <div id="options">
+        <fieldset>
+          <legend>Resolutions:</legend>
+          <div id="resolution-list"></div>
+          <br/>
+        </fieldset>
+
+        <fieldset>
+          <legend>Captions:</legend>
+          <div id="caption-list"></div>
+          <br/>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rates:</legend>
+          <div id="rate-list"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Volume</legend>
+          <div id="volume"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Status</legend>
+          <div id="player-status"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Playlist position</legend>
+          <div id="playlist-position"></div>
+        </fieldset>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- iframes are used dynamically -->
+  <iframe hidden></iframe>
+  <a hidden></a>
+
+</body>
+</html>

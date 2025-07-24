@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-main/date/date-toggle.component.scss"],
+  "sourcesContent": [".date-toggle {\n  &:hover {\n    cursor: default;\n  }\n}\n"],
+  "mappings": "AACE,CAAA,WAAA,OACE,OAAA",
+  "names": []
+}

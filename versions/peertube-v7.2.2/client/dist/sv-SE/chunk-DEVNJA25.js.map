@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/root-helpers/web-browser.ts"],
+  "sourcesContent": ["export function isIOS () {\n  if (/iPad|iPhone|iPod/.test(navigator.platform)) {\n    return true\n  }\n\n  // Detect iPad Desktop mode\n  return !!(navigator.maxTouchPoints &&\n      navigator.maxTouchPoints > 2 &&\n      navigator.platform.includes('MacIntel'))\n}\n\nexport function isSafari () {\n  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)\n}\n\nexport function isMobile () {\n  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)\n}\n\nexport function isIphone () {\n  return /iPhone/i.test(navigator.userAgent)\n}\n\nexport function isAndroid () {\n  return /Android/i.test(navigator.userAgent)\n}\n"],
+  "mappings": "AAAM,SAAUA,GAAK,CACnB,MAAI,mBAAmBC,KAAKC,UAAUC,QAAQ,EACrC,GAIF,CAAC,EAAED,UAAUE,gBAChBF,UAAUE,eAAiB,GAC3BF,UAAUC,SAASE,SAAS,UAAU,EAC5C,CAMM,SAAUC,GAAQ,CACtB,MAAO,4BAA4BC,KAAKC,UAAUC,SAAS,CAC7D,CAEM,SAAUC,GAAQ,CACtB,MAAO,UAAUH,KAAKC,UAAUC,SAAS,CAC3C,CAEM,SAAUE,GAAS,CACvB,MAAO,WAAWJ,KAAKC,UAAUC,SAAS,CAC5C",
+  "names": ["isIOS", "test", "navigator", "platform", "maxTouchPoints", "includes", "isMobile", "test", "navigator", "userAgent", "isIphone", "isAndroid"]
+}

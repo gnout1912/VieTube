@@ -1,0 +1,1 @@
+{"version":3,"file":"whisper-builtin-model.js","sourceRoot":"","sources":["../../src/whisper/whisper-builtin-model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAA;AAI9D,MAAM,OAAO,mBAAoB,SAAQ,kBAAkB;IAGzD,YAAa,IAA6B;QACxC,KAAK,CAAC,IAAI,CAAC,CAAA;IACb,CAAC;CACF"}

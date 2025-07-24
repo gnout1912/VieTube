@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-main/common/bytes.pipe.ts"],
+  "sourcesContent": ["import { Pipe, PipeTransform } from '@angular/core'\nimport { getBytes } from '@root-helpers/bytes'\n\n// Thanks: https://github.com/danrevah/ngx-pipes/blob/master/src/ng-pipes/pipes/math/bytes.ts\n\n@Pipe({\n  name: 'bytes',\n  standalone: true\n})\nexport class BytesPipe implements PipeTransform {\n\n  transform (value: number, precision = 0): string | number {\n    return getBytes(value, precision)\n  }\n}\n"],
+  "mappings": "oFASA,IAAaA,GAAS,IAAA,CAAhB,IAAOA,EAAP,MAAOA,CAAS,CAEpBC,UAAWC,EAAeC,EAAY,EAAC,CACrC,OAAOC,EAASF,EAAOC,CAAS,CAClC,KAJWH,wCAAAA,EAAS,KAATA,oCAAAA,EAASK,KAAA,EAAA,CAAA,GAAhB,IAAOL,EAAPM,SAAON,CAAS,GAAA",
+  "names": ["BytesPipe", "transform", "value", "precision", "getBytes", "pure", "_BytesPipe"]
+}

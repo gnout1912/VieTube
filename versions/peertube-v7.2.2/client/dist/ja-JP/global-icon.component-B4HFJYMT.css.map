@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-icons/global-icon.component.scss"],
+  "sourcesContent": [":host {\n  display: inline-block;\n  height: 24px;\n  width: 24px;\n\n  ::ng-deep {\n    svg {\n      vertical-align: bottom;\n      width: inherit;\n      height: inherit;\n    }\n\n    .feather-flag {\n      margin-left: -1px;\n    }\n  }\n}\n"],
+  "mappings": "AAAA,MACE,QAAA,aACA,OAAA,KACA,MAAA,KAGE,MAAA,UAAA,IACE,eAAA,OACA,MAAA,QACA,OAAA,QAGF,MAAA,UAAA,CAAA,aACE,YAAA",
+  "names": []
+}

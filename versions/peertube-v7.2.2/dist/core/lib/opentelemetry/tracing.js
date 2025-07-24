@@ -1,0 +1,95 @@
+import { logger } from '../../helpers/logger.js';
+import { CONFIG } from '../../initializers/config.js';
+let tracer;
+async function registerOpentelemetryTracing() {
+    if (CONFIG.OPEN_TELEMETRY.TRACING.ENABLED !== true) {
+        tracer = new TrackerMock();
+        return;
+    }
+    const { diag, DiagLogLevel, trace } = await import('@opentelemetry/api');
+    tracer = trace.getTracer('peertube');
+    const [{ JaegerExporter }, { registerInstrumentations }, DnsInstrumentation, ExpressInstrumentation, { FsInstrumentation }, { HttpInstrumentation }, IORedisInstrumentation, PgInstrumentation, { SequelizeInstrumentation }, Resource, BatchSpanProcessor, NodeTracerProvider, SemanticResourceAttributes] = await Promise.all([
+        import('@opentelemetry/exporter-jaeger'),
+        import('@opentelemetry/instrumentation'),
+        import('@opentelemetry/instrumentation-dns'),
+        import('@opentelemetry/instrumentation-express'),
+        import('@opentelemetry/instrumentation-fs'),
+        import('@opentelemetry/instrumentation-http'),
+        import('@opentelemetry/instrumentation-ioredis'),
+        import('@opentelemetry/instrumentation-pg'),
+        import('opentelemetry-instrumentation-sequelize'),
+        import('@opentelemetry/resources'),
+        import('@opentelemetry/sdk-trace-base'),
+        import('@opentelemetry/sdk-trace-node'),
+        import('@opentelemetry/semantic-conventions')
+    ]);
+    logger.info('Registering Open Telemetry tracing');
+    const customLogger = (level) => {
+        return (message, ...args) => {
+            let fullMessage = message;
+            for (const arg of args) {
+                if (typeof arg === 'string')
+                    fullMessage += arg;
+                else
+                    break;
+            }
+            logger[level](fullMessage);
+        };
+    };
+    diag.setLogger({
+        error: customLogger('error'),
+        warn: customLogger('warn'),
+        info: customLogger('info'),
+        debug: customLogger('debug'),
+        verbose: customLogger('verbose')
+    }, DiagLogLevel.INFO);
+    const tracerProvider = new NodeTracerProvider.default.NodeTracerProvider({
+        spanProcessors: [
+            new BatchSpanProcessor.default.BatchSpanProcessor(new JaegerExporter({ endpoint: CONFIG.OPEN_TELEMETRY.TRACING.JAEGER_EXPORTER.ENDPOINT }))
+        ],
+        resource: Resource.default.resourceFromAttributes({
+            [SemanticResourceAttributes.default.ATTR_SERVICE_NAME]: 'peertube'
+        })
+    });
+    registerInstrumentations({
+        tracerProvider,
+        instrumentations: [
+            new PgInstrumentation.default.PgInstrumentation({
+                enhancedDatabaseReporting: true
+            }),
+            new DnsInstrumentation.default.DnsInstrumentation(),
+            new HttpInstrumentation(),
+            new ExpressInstrumentation.default.ExpressInstrumentation(),
+            new IORedisInstrumentation.default.IORedisInstrumentation({
+                dbStatementSerializer: function (cmdName, cmdArgs) {
+                    return [cmdName, ...cmdArgs].join(' ');
+                }
+            }),
+            new FsInstrumentation(),
+            new SequelizeInstrumentation()
+        ]
+    });
+    tracerProvider.register();
+}
+async function wrapWithSpanAndContext(spanName, cb) {
+    const { context, trace } = await import('@opentelemetry/api');
+    if (CONFIG.OPEN_TELEMETRY.TRACING.ENABLED !== true) {
+        return cb();
+    }
+    const span = tracer.startSpan(spanName);
+    const activeContext = trace.setSpan(context.active(), span);
+    const result = await context.with(activeContext, () => cb());
+    span.end();
+    return result;
+}
+export { registerOpentelemetryTracing, tracer, wrapWithSpanAndContext };
+class TrackerMock {
+    startSpan() {
+        return new SpanMock();
+    }
+}
+class SpanMock {
+    end() {
+    }
+}
+//# sourceMappingURL=tracing.js.map

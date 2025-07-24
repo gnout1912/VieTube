@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/shared-main/common/link.component.scss"],
+  "sourcesContent": [".inherit-parent-style {\n  color: inherit;\n  opacity: inherit;\n  text-decoration: inherit;\n}\n\n.inherit-parent-dimension {\n  position: inherit;\n  width: inherit;\n  height: inherit;\n}\n"],
+  "mappings": "AAAA,CAAA,qBACE,MAAA,QACA,QAAA,QACA,gBAAA,QAGF,CAAA,yBACE,SAAA,QACA,MAAA,QACA,OAAA",
+  "names": []
+}
